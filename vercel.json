@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1",
+      "error": { "statusCode": 404, "source": "/404.html" }
+    }
+  ],
+  "error": { "html": "public/erreur.html" },
+  "cleanUrls": true
+}
