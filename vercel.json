@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "https://www.sam2i.fr/$1",
+      "destination": "https://www.sam2i.fr/:splat",
       "has": [
         {
           "type": "host",
@@ -12,40 +12,23 @@
           "type": "protocol",
           "value": "http"
         }
-      ],
-      "status": 301
+      ]
     },
     {
       "source": "/(.*)\\.html",
-      "destination": "/$1",
-      "has": [
-        {
-          "type": "request",
-          "key": "User-Agent",
-          "value": "Mozilla"
-        }
-      ],
-      "status": 301
+      "destination": "/:splat"
     },
     {
       "source": "/(.*)\\.xml",
-      "destination": "/$1",
-      "has": [
-        {
-          "type": "request",
-          "key": "User-Agent",
-          "value": "Mozilla"
-        }
-      ],
-      "status": 301
+      "destination": "/:splat"
     },
     {
       "source": "/(.*)\\.html",
-      "destination": "/$1.html"
+      "destination": "/:splat.html"
     },
     {
       "source": "/(.*)\\.xml",
-      "destination": "/$1.xml"
+      "destination": "/:splat.xml"
     }
   ]
 }
