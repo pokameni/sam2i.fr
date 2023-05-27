@@ -47,17 +47,5 @@
       "source": "/(.*)\\.xml",
       "destination": "/$1.xml"
     }
-  ],
-  "error_pages": {
-    "400": "/erreur",
-    "401": "/erreur",
-    "402": "/erreur",
-    "403": "/erreur",
-    "404": "/erreur",
-    "500": "/erreur",
-    "501": "/erreur",
-    "502": "/erreur",
-    "503": "/erreur",
-    "504": "/erreur"
-  }
+  ]
 }
