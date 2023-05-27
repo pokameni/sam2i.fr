@@ -1,10 +1,12 @@
 {
+  "error": {
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/_error.html" }
+    ]
+  },
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/$1",
-      "error": { "statusCode": 404, "source": "/404.html" }
-    }
+    { "source": "/_error.html", "destination": "/_next/static/error.html" },
+    { "source": "/(.*)", "destination": "/$1" }
   ],
   "cleanUrls": true
 }
